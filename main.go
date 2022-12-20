@@ -14,7 +14,12 @@ type Recipe struct {
 	PublishedAt  time.Time `json:"publishedAt"`
 }
 
+func newRecipeHandler(c *gin.Context) {
+
+}
+
 func main() {
 	router := gin.Default()
+	router.POST("/recipes", newRecipeHandler)
 	router.Run()
 }
